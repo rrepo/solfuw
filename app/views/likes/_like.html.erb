@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+
+<% if @posting.like_user(current_user.id)%>
+      <%= button_to posting_like_path(posting_id: @posting.id), method: :delete, id: "like-button", remote: true do %>
+
+      <span>
+        <%= @posting.likes_count %>
+      </span>
+    <% end %>
+  <% else %>
+    <%= button_to posting_likes_path(@posting), id: "like-button", remote: true do %>
+        
+      <span>
+        <%= @posting.likes_count %>
+      </span>
+    <% end %>
+  <% end %>
+<% else %>
+    <%= image_tag("good.png") %>
+    <span>
+      <%= @posting.likes_count %>
+    </span>
+<% end %>

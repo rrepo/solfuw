@@ -1,0 +1,16 @@
+<%= render 'menubar' %>
+<div class="box11">
+    
+    <%= form_tag('/posting', method: :post) do %>
+        <h3>投稿する</h3>
+        <textarea name="text" placeholder="text" rows="10" cols="30"></textarea>
+        <input type="radio" name="genre" value="1">男性
+        <input type="radio" name="genre" value="2">女性
+        <input type="submit" value="SENT">
+    <% end %>
+    
+</div>
+      <%= render 'sidebar' %>
+<footer>
+    <%= render 'footer' %>
+</footer>

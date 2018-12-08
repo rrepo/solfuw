@@ -1,0 +1,12 @@
+
+<div class="box11">
+    <p><%= @nickname %>さんの投稿一覧</p>
+    <% @posting.each do |posting| %>
+        <%= simple_format(posting.text) %>
+    <% end %>
+    <%= paginate(@posting) %>
+</div>
+
+<footer>
+
+</footer>

@@ -1,0 +1,200 @@
+body {
+  background-color: white;
+  font-size: 15px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+    line-height: 1.77;
+    font-size: 18px;
+    color: #4a4a4a;
+    font-family: sans-serif;
+    margin:0;
+    padding:0;
+}
+#header{
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+.heading{
+  width:100%;
+  height:43px;
+  background-color:#dbd9dc;
+  top: 0px;
+  left: 0px;      
+	position: fixed; 
+  display: block;
+  margin: auto;
+	text-align: center;
+}
+.top img{
+  height:100%;
+}
+.ber{
+  width:100%;
+}
+.nav {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  float: right;
+  height:100%;
+}
+.nav li {
+  position: relative;
+  list-style: none;
+}
+.nav li a {
+  display: block;
+  width:100%;
+  height:43px;
+  text-align: center;
+  color: #fff;
+  font-size:100%;
+  display: -webkit-flex;
+ display: flex;
+ -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+ align-items: center; /* 縦方向中央揃え */
+ -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+ justify-content: center; /* 横方向中央揃え */
+  line-height:100%;
+  background: #333;
+  text-decoration: none;
+  border-right: 1px solid #333;
+}
+.nav > li:hover > a {
+  color: orange;
+  background: #4a4a4a;
+}
+.nav > li li:hover > a {
+  color:#ff7f7f;
+  background: #4a4a4a;
+}
+.nav li ul {
+  left: -40px;
+  position: absolute;
+}
+.nav li ul li {
+  overflow: hidden;
+  height: 0;
+  transition: 0.2s;
+}
+.nav li ul li a {
+  border-top: 1px solid #333;
+  float: right;
+}
+.nav li:hover > ul > li {
+
+  height:100%;
+}
+  .nav li ul li ul {
+    top: 0;
+    /*left: 110px;*/
+  }
+  .nav li ul li ul:before {
+  }
+  .nav li ul li ul li:hover > a {
+    color: pink;
+    background:#4a4a4a;
+  }
+  .nav li ul li ul.left {
+  }
+  .nav li ul li ul.left:before,
+  .nav li ul li ul li ul.left:before {
+    content: "";
+  }
+  .nav li ul li ul.left li:hover > a {
+    background:#4a4a4a;
+  }
+  .nav li ul li ul li ul.left li:hover > a {
+    background:#4a4a4a;
+  }
+  
+.blank{
+  padding:2%;
+}
+.face{
+  width:100%;
+  text-align:center;
+  display: block;
+  margin: auto;
+  background-color:#e87a7a;
+}
+.face img{
+  width:20%;
+}
+.face h1{
+  font-size:50px;
+  color:white;
+}
+// .face_haikei{
+//   width:100%;
+// }
+.square_btn{
+    display: inline-block;
+    padding: 1% 10%;
+    text-decoration: none;
+    background: #333;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+}
+.square_btn:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+.box11{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    float:left;
+    width:80%;
+}
+.box11 p {
+    margin: 0; 
+    padding: 0;
+}
+.square_btn_{
+    display: inline-block;
+    // padding: 1% 1%;
+    text-decoration: none;
+    background: #333;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+    float:right;
+    margin:1px;
+}
+.square_btn_:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
+.side{
+  width: 17%;
+  float: right;
+  text-align: center;
+}
+.side_image img{
+  width:100%;
+}
+.good_btn{
+  width:5%;
+}
+
+
+
+.fooding{
+  width: 100%;
+  background-color: #dbd9dc;
+  text-align: center;
+  float: left;
+  text-decoration: none
+}

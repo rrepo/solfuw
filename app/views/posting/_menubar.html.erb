@@ -1,0 +1,47 @@
+<div class="heading" >
+    
+    <%= link_to image_tag("srfuw_mizika_touka.png"), "/", class: "top" %>
+    
+    <ul class="nav">
+        <li><a href="/sorfuw/whatis">Sorfuwとは</a>
+        <ul>
+        <!--<li><a href=""><br>Sorfuwの目的<br>　</a></li>-->
+        <li><a href="">お問い合わせ</a></li>
+        <li><a href="">利用規約</a></li>
+        </ul>
+        </li>
+        
+        <!--<li><a href="">掲示板</a>-->
+        <!--<ul>-->
+        <!--<li><a href="/">雑談</a>-->
+        <!--</li>-->
+        <!--<li><a href="/sorfuw/situmon">質問</a></li>-->
+        <!--</ul>-->
+        <!--</li>-->
+        
+        <!--<li><a href="#">プログラミング</a>-->
+        <!--<ul>-->
+        <!--<li><a href="#"></a>-->
+        <!--</li>-->
+        <!--<li><a href="#">質問</a></li>-->
+        <!--</ul>-->
+        <!--</li>-->
+        
+        <% if user_signed_in? %>
+        <li><%= link_to "ログアウト", destroy_user_session_path, class: 'post' ,method: :delete%>
+        <ul>
+        <li><a href="/users/<%= current_user.id %>">マイページ</a>
+        </ul>
+        </li>
+        
+        <% else %>
+        <li><%= link_to "ログイン", new_user_session_path, class: 'post' %>
+        <ul>
+        <li><%= link_to "新規登録", new_user_registration_path, class: 'post'%>
+        </ul>
+        </li>
+        <% end %>
+        
+    </ul>
+</div>
+    <div class="blank"></div>

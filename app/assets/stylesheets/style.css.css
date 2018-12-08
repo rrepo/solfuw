@@ -1,0 +1,133 @@
+@charset "UTF-8";
+body {
+  background-color: white;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6, p {
+  line-height: 1.77;
+  font-size: 18px;
+  color: #4a4a4a;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0; }
+
+#header {
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.heading {
+  width: 100%;
+  height: 43px;
+  background-color: #dbd9dc;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  display: block;
+  margin: auto;
+  text-align: center; }
+
+.top img {
+  height: 100%; }
+
+.ber {
+  width: 100%; }
+
+.nav {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  float: right;
+  height: 100%; }
+
+.nav li {
+  position: relative;
+  list-style: none; }
+
+.nav li a {
+  display: block;
+  width: 100%;
+  height: 43px;
+  text-align: center;
+  color: #fff;
+  font-size: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  /* 縦方向中央揃え（Safari用） */
+  align-items: center;
+  /* 縦方向中央揃え */
+  -webkit-justify-content: center;
+  /* 横方向中央揃え（Safari用） */
+  justify-content: center;
+  /* 横方向中央揃え */
+  line-height: 100%;
+  background: #333;
+  text-decoration: none;
+  border-right: 1px solid #333; }
+
+.nav > li:hover > a {
+  color: orange;
+  background: #4a4a4a; }
+
+.nav > li li:hover > a {
+  color: #ff7f7f;
+  background: #4a4a4a; }
+
+.nav li ul {
+  left: -40px;
+  position: absolute; }
+
+.nav li ul li {
+  overflow: hidden;
+  height: 0;
+  transition: 0.2s; }
+
+.nav li ul li a {
+  border-top: 1px solid #333;
+  float: right; }
+
+.nav li:hover > ul > li {
+  height: 100%; }
+
+.nav li ul li ul {
+  top: 0;
+  /*left: 110px;*/ }
+
+.nav li ul li ul li:hover > a {
+  color: pink;
+  background: #4a4a4a; }
+
+.nav li ul li ul.left:before,
+.nav li ul li ul li ul.left:before {
+  content: ""; }
+
+.nav li ul li ul.left li:hover > a {
+  background: #4a4a4a; }
+
+.nav li ul li ul li ul.left li:hover > a {
+  background: #4a4a4a; }
+
+.yohaku {
+  padding: 2%; }
+
+.setumei {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: auto;
+  background-color: #e87a7a; }
+
+.setumei img {
+  width: 20%; }
+
+.setumei h1 {
+  font-size: 50px;
+  color: white; }
+
+.setumei_haikei {
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.css.map */

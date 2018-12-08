@@ -1,0 +1,33 @@
+<%= render 'menubar' %>
+
+<br>
+<a href="/" class="square_btn">部屋一覧</a>
+<a href="/posting/new" class="square_btn">投函</a>
+<br>
+
+    <%= render 'likes/like'
+    #,:locals => { posting:@posting.postign} 
+    %>
+    
+<div class="box11">
+    <%=@posting.user.nickname %>:<%= @posting.text %>
+    <% if @comments %>
+        <% @comments.each do |comment| %>
+        <p><strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong><%= comment.text %></p>
+        <% end %>
+    <% end %>
+                
+    <% if current_user %>
+        <%= form_tag("/posting/#{@posting.id}/comments", method: :post) do %>
+            <textarea name="text" placeholder="コメントする" rows="2" cols="30"></textarea>
+            <input type="submit" value="SENT">
+        <% end %>
+    <% end %>
+    
+</div>
+    
+<%= render 'sidebar' %>
+
+<footer>
+    <%= render 'footer' %>
+</footer>

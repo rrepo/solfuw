@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+  <% if @positng.like_user(current_user.id) %>
+    <%= button_to positng_like_path(like, positng_id: positng.id), method: :delete, id: "like-button", remote: true do %>
+      <%= image_tag("icon_red_heart.svg") %>
+      <span>
+        <%= positng.like_count %>
+      </span>
+    <% end %>
+  <% else %>
+    <%= button_to positng_likes_path(positng), id: "like-button", remote: true do %>
+      <%= image_tag("icon_heart.svg") %>
+      <span>
+        <%= positng.like_count %>
+      </span>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= image_tag("good.png")%>
+    <span>
+      <%= @posting.likes_count %>
+    </span>
+<% end %>
